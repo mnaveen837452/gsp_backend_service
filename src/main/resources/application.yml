@@ -1,0 +1,12 @@
+server:
+  port: 9095
+spring :
+  datasource :
+    url: "jdbc:postgresql://localhost:5432/apgs"  
+    username: postgres  
+    password: admin
+  jpa:
+    properties :
+      hibernate :
+        default_schema : apgss
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
