@@ -6,7 +6,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.Getter;
@@ -15,15 +14,12 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name="Student")
-public class Student {
+@Table(name = "Teacher")
+public class Teacher {
 
 	@Id
-	@GeneratedValue(generator = "student_sequence")
+	@GeneratedValue(generator = "teacher_sequence")
 	private Integer id;
-	
-	@Column
-	private Integer rollNumber;
 	
 	@Column
 	private String firstName;
@@ -35,25 +31,30 @@ public class Student {
 	private String middleName;
 	
 	@Column
-	private Long aadhar;
+	private String fatherName;
 	
 	@Column
-	private LocalDate dateOfBirth;
+	private String motherName;
+	
+	@Column
+	private String qualification;
 	
 	@Column
 	private LocalDate joiningDate;
 	
 	@Column
-	private String joinedStandard;
+	private Long mobileNumber;
 	
 	@Column
-	private String address;
+	private String phoneNumber;
 	
 	@Column
-	private String standard;
+	private Long aadhar;
 	
-	//@OneToOne
-	//private com.apgs.backend.service.database.model.Teacher classTeacher;
-	@OneToOne
-	private ParentsDetails parentsDetails;
+	/*
+	 * @OneToMany(cascade = CascadeType.ALL)
+	 * 
+	 * @JoinColumn(name = "ID", referencedColumnName = "ID") private List<Subject>
+	 * subjects;
+	 */
 }

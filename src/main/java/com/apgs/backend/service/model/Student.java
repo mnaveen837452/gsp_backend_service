@@ -1,5 +1,7 @@
 package com.apgs.backend.service.model;
 
+import java.time.LocalDate;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -7,16 +9,24 @@ import lombok.Setter;
 @Setter
 public class Student {
 
-	Integer Id;
+	private Integer Id;
 	
-	Integer rollNumber;
+	private Integer rollNumber;
 	
-	Name studentName;
+	private Name studentName;
 	
-	Name fatherName;
+	private Long aadhar;
 	
-	Name motherName;
+	private LocalDate dateOfBirth;
 	
-	String standard;	
+	private LocalDate joiningDate;
+	
+	private String joinedStandard;
+	
+	private String address;
+	
+	private String standard;
+	
+	//private Teacher classTeacher;
 	
 }
