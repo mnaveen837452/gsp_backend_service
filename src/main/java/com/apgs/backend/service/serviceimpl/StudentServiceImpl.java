@@ -40,13 +40,15 @@ public class StudentServiceImpl implements StudentService {
 		studentDb.setLastName(student.getStudentName().getLast());
 		studentDb.setMiddleName(student.getStudentName().getMiddle());
 		
-		studentDb.setFatherFirstName(student.getFatherName().getFirst());
-		studentDb.setFatherLastName(student.getFatherName().getLast());
-		studentDb.setFatherMiddleName(student.getStudentName().getMiddle());
-		
-		studentDb.setMotherFirstName(student.getMotherName().getFirst());
-		studentDb.setMotherLastName(student.getMotherName().getLast());
-		studentDb.setMotherMiddleName(student.getStudentName().getMiddle());
+		/*
+		 * studentDb.setFatherFirstName(student.getFatherName().getFirst());
+		 * studentDb.setFatherLastName(student.getFatherName().getLast());
+		 * studentDb.setFatherMiddleName(student.getStudentName().getMiddle());
+		 * 
+		 * studentDb.setMotherFirstName(student.getMotherName().getFirst());
+		 * studentDb.setMotherLastName(student.getMotherName().getLast());
+		 * studentDb.setMotherMiddleName(student.getStudentName().getMiddle());
+		 */
 		
 		studentDb.setRollNumber(student.getRollNumber());
 		studentDb.setStandard(student.getStandard());
@@ -71,27 +73,23 @@ public class StudentServiceImpl implements StudentService {
 		}
 		
 		
-		if(!student.getFatherName().getFirst().equalsIgnoreCase("")) {
-			studentDb.setFatherFirstName(student.getFatherName().getFirst());
-		}
-		if(!student.getFatherName().getFirst().equalsIgnoreCase("")) {
-			studentDb.setFatherLastName(student.getFatherName().getLast());
-		}
-		
-		if(!student.getFatherName().getFirst().equalsIgnoreCase("")) {
-			studentDb.setFatherMiddleName(student.getStudentName().getMiddle());
-		}
-		
-		if(!student.getFatherName().getFirst().equalsIgnoreCase("")) {
-			studentDb.setMotherFirstName(student.getMotherName().getFirst());
-		}
-		if(!student.getFatherName().getFirst().equalsIgnoreCase("")) {
-			studentDb.setMotherLastName(student.getMotherName().getLast());
-		}
-		
-		if(!student.getFatherName().getFirst().equalsIgnoreCase("")) {
-			studentDb.setMotherMiddleName(student.getStudentName().getMiddle());
-		}
+		/*
+		 * if(!student.getFatherName().getFirst().equalsIgnoreCase("")) {
+		 * studentDb.setFatherFirstName(student.getFatherName().getFirst()); }
+		 * if(!student.getFatherName().getFirst().equalsIgnoreCase("")) {
+		 * studentDb.setFatherLastName(student.getFatherName().getLast()); }
+		 * 
+		 * if(!student.getFatherName().getFirst().equalsIgnoreCase("")) {
+		 * studentDb.setFatherMiddleName(student.getStudentName().getMiddle()); }
+		 * 
+		 * if(!student.getFatherName().getFirst().equalsIgnoreCase("")) {
+		 * studentDb.setMotherFirstName(student.getMotherName().getFirst()); }
+		 * if(!student.getFatherName().getFirst().equalsIgnoreCase("")) {
+		 * studentDb.setMotherLastName(student.getMotherName().getLast()); }
+		 * 
+		 * if(!student.getFatherName().getFirst().equalsIgnoreCase("")) {
+		 * studentDb.setMotherMiddleName(student.getStudentName().getMiddle()); }
+		 */
 		
 		if(student.getRollNumber() != null) {
 			studentDb.setRollNumber(student.getRollNumber());
